@@ -1,17 +1,17 @@
 $(document).ready( function() {
-  function fart() {
+  function thing() {
     function addBlock() {
-      $('ul').append('<li><div id="block"></div></li>');
+      $('tr').append('<td id="block"></td>');
     };
-    for (var j=0; j<100 ; j++) {
+    for (var j=0; j<2 ; j++) {
       addBlock()
     }
   };
 
   function addArea() {
-    $('.container').append('<ul>', fart() ,  '</ul>')
+    $('#table').append('<tr>', thing() ,  '</tr>')
   };
-  for (var i=0; i<11 ; i++) {
+  for (var i=0; i<8 ; i++) {
     addArea()
   };
 
@@ -20,14 +20,12 @@ $(document).ready( function() {
     $(this).find('div').append('<div id="block2"></div>')
   });
 
+  $("#reset").click( function() {
+    var person = prompt("Please enter grid size", "20");
+    $('li').append(function(){
+      $(this).find('div').css("background-color", "blue");
+    });
 
-  $("#reset").click(function() {
-    document.location.reload(true);
-    var prompt = prompt("How many boxes?", "20");
-    if (prompt != null) {
-      document.getElementByID("demo").innerHTML =
-      "hello " + prompt + "! How are you today?";
-    }
   });
 
 });
