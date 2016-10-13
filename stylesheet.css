@@ -4,8 +4,6 @@
   width: 500px;
   margin-left:50px;
   margin-top: 100px;
-
-
 }
 
 #block {
@@ -15,9 +13,15 @@
   display:inline-block;
 }
 
+#block2 {
+  background-color: black;
+  height: 50px;
+  width: 50px;
+  display:inline-block;
+}
+
 li {
   display:inline;
-
 }
 
 ul {
@@ -26,15 +30,4 @@ ul {
   list-style: none;
   overflow:auto;
   margin-top:-20px;
-}
-
-/*li:hover > #block {
-  background-color: black;
-}*/
-
-#block2 {
-  background-color: black;
-  height: 50px;
-  width: 50px;
-  display:inline-block;
 }
