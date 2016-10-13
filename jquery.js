@@ -15,6 +15,10 @@ $(document).ready( function() {
     addArea()
   };
 
+  $('li').one('mouseover', function() {
+    $(this).find('div').append('<div id="block2"></div>')
+  });
+
 
 
 

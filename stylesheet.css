@@ -27,10 +27,14 @@ ul {
   overflow:auto;
   margin-top:-20px;
 }
-li:hover > #block {
-  background-color: black;
-}
 
-li:hover::after > #block {
+/*li:hover > #block {
   background-color: black;
+}*/
+
+#block2 {
+  background-color: black;
+  height: 50px;
+  width: 50px;
+  display:inline-block;
 }
