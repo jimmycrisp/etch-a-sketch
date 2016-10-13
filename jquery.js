@@ -1,31 +1,36 @@
 $(document).ready( function() {
-  function thing() {
-    function addBlock() {
-      $('tr').append('<td id="block"></td>');
-    };
-    for (var j=0; j<2 ; j++) {
-      addBlock()
-    }
+
+  function addTop() {
+    $('#table').append('<tr class="block"></tr>')
+  };
+  for (var i=0; i<10 ; i++) {
+    addTop()
   };
 
-  function addArea() {
-    $('#table').append('<tr>', thing() ,  '</tr>')
+  function addBottom() {
+    $('tr').append('<td class="block"></td>');
   };
-  for (var i=0; i<8 ; i++) {
-    addArea()
+  for (var j=0; j<10 ; j++) {
+    addBottom()
   };
 
+  var safeColors = ['00','33','66','99','cc','ff'];
+  var rand = function() {
+    return Math.floor(Math.random()*6);
+  };
+  var randomColor = function() {
+    var r = safeColors[rand()];
+    var g = safeColors[rand()];
+    var b = safeColors[rand()];
+    return "#"+r+g+b;
+  };
 
-  $('li').one('mouseover', function() {
-    $(this).find('div').append('<div id="block2"></div>')
+  $('td').on('mouseover', function() {
+    $(this).css('background-color',randomColor())
   });
 
   $("#reset").click( function() {
-    var person = prompt("Please enter grid size", "20");
-    $('li').append(function(){
-      $(this).find('div').css("background-color", "blue");
-    });
-
+    var value = prompt("Please enter grid size", "20");
   });
 
 });

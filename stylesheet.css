@@ -6,8 +6,15 @@
   margin-top: 100px;
 }
 
-#block {
+.block {
   background-color: red;
+  height: 50px;
+  width: 50px;
+  display:inline-block;
+}
+
+.block2 {
+  background-color: black;
   height: 50px;
   width: 50px;
   display:inline-block;
@@ -15,13 +22,6 @@
 
 #table {
   border-spacing: 0px;
-}
-
-#block2 {
-  background-color: black;
-  height: 50px;
-  width: 50px;
-  display:inline-block;
 }
 
 li {
